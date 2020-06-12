@@ -1,0 +1,66 @@
+// main: ../style.less
+.btn {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.9rem;
+    color: @white;
+    text-decoration: none;
+    text-transform: capitalize;
+
+    padding: 1.3em 1.8em;
+    background-color: #99c50a;
+    border-radius: .53em;
+    transition: background .3s linear;
+
+    &:hover {
+        background-color: #9aaf54;
+    }
+
+    @media @tablet {
+        font-size: 1.7rem;
+    }
+
+    @media @mobile {
+        font-size: 1.5rem;
+    }
+
+    @media @mobile-sm {
+        font-size: 1.3rem;
+    }
+
+    &--min {
+        font-size: 1.5rem;
+        padding: 1.3em 1.7em;
+
+        @media @tablet {
+            font-size: 1.2rem;
+        }
+    }
+
+    &--blue {
+        background-color: @blue;
+
+        &:hover {
+            background-color: #2787a7;
+        }
+    }
+
+    &--green {
+        background-color: @green-light;
+
+        &:hover {
+            background-color: #91ad35;
+        }
+    }
+
+    &--white {
+        background-color: @white;
+        color: @gray;
+        border: 1px solid @gray-light;
+
+        &:hover {
+            background-color: #ffecec;
+        }
+    }
+}

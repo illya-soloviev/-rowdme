@@ -1,0 +1,111 @@
+// main: ../style.less
+.header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    padding: 2rem 0;
+    background-color: @white;
+
+    transition: padding .3s linear;
+
+    &.active {
+        position: fixed;
+        left: 0;
+        top: 0;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        box-shadow: 0 0 10px fade(@black, 60%);
+    }
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    transition: transform .3s linear;
+}
+
+.header.active .header__logo {
+    transform: scale(0.6) translateX(-30%);
+}
+
+.header__nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @media @tablet {
+        display: block;
+
+        width: 100%;
+        height: calc(~"100vh - 7.6rem");
+        position: fixed;
+        top: 76px;
+        left: 0;
+        right: 0;
+        margin-top: -1px;
+        z-index: 10;
+
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        text-align: center;
+        background: @white;
+        box-shadow:  0 4px 5px fade(@black, 20%);
+
+        overflow-y: scroll;
+        border-top: 1px solid fade(@gray-light, 20%);
+
+        transform: translateX(100%);
+        transition: transform .25s ease-in-out;
+
+        &.active {
+            transform: translateX(0);
+        }
+    }
+
+    @media @mobile {
+        width: 100%;
+    }
+}
+
+.header.active .header__nav {
+    @media @tablet {
+        height: calc(~"100vh - 5.6rem");
+        top: 56px;
+    }
+}
+
+.header__btn {
+    display: inline-block;
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: @white;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    border-radius: 2.3em;
+    padding: 1em 2.3em;
+    background-color: #bcda5c;
+
+    transition: background .3s linear;
+
+    &:hover {
+        background-color: #9aaf54;
+    }
+
+    @media @tablet {
+        display: block;
+        border-radius: 0;
+    }
+}
+

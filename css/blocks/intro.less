@@ -1,0 +1,67 @@
+// main: ../style.less
+.intro__slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 570px;
+    
+    background: #c6cdc6 url(../img/intro/bg-1.jpg) center no-repeat;
+    background-size: cover;
+    
+    padding-top: 8.5rem;
+    
+    &--two {
+        background-image: url(../img/intro/bg-2.jpg);
+    }
+}
+
+.intro__inner {
+    text-align: center;
+}
+
+.intro__subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 5rem;
+    line-height: 1;
+    color: @white;
+    
+    margin-bottom: 2.5rem;
+    
+    @media @tablet {
+        font-size: 4rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    @media @mobile {
+        font-size: 3.5rem;
+    }
+    
+    @media @mobile-sm {
+        font-size: 2.7rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.intro__text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 3rem;
+    color: @white;
+    
+    margin-bottom: 5.5rem;
+    
+    @media @tablet {
+        font-size: 2.5rem;
+        margin-bottom: 4rem;
+    }
+    
+    @media @mobile {
+        font-size: 2.2rem;
+    }
+    
+    @media @mobile-sm {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+}

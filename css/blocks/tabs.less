@@ -1,0 +1,162 @@
+// main: ../style.less
+.tabs-nav {
+    display: flex;
+    justify-content: space-between;
+    
+    border-bottom: 1px solid @gray-light;
+    
+    @media @mobile {
+        flex-wrap: wrap;
+        border: 0;
+    }
+}
+
+.tabs-nav__item {
+    display: flex;
+    align-items: center;
+    
+    padding: 3.5rem 2.5rem 3.5rem 0;
+    cursor: pointer;
+    
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 3.3rem;
+    color: @gray;
+    
+    &.active {
+        border-bottom: 1px solid @green-light;
+        
+        @media @mobile {
+            border: 0;
+            background-color: @yellow;
+        }
+    }
+    
+    @media @mobile {
+        width: 100%;
+        justify-content: center;
+        background-color: @green-light;
+        color: @white;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        font-size: 2rem;
+    }
+    
+    @media @mobile-sm {
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+        font-size: 1.5rem;
+    }
+}
+
+.tabs-nav__numb {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 25px;
+    background-color: @black;
+    
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    color: @white;
+    text-align: center;
+    line-height: 44px;
+    
+    transition: background .3s linear;
+    margin-right: 2.5rem;
+    
+    @media @mobile {
+        display: none;
+    }
+}
+
+.tabs-nav__item:hover .tabs-nav__numb {
+    background-color: @green-light;
+}
+
+.tabs-nav__item.active .tabs-nav__numb {
+    background-color: @green-light;
+}
+
+.tabs__item {
+    display: none;
+    padding: 6rem 0 0 30.5rem;
+    
+    position: relative;
+    
+    &.active {
+        display: block;
+    }
+    
+    @media @tablet {
+        padding-top: 3.5rem;
+        padding-left: 21rem;
+    }
+    
+    @media @mobile-sm {
+        padding-left: 0;
+        text-align: center;
+    }
+}
+
+.tabs__img {
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    top: 85px;
+    left: 100px;
+    z-index: 1;
+    
+    fill: #2394bc;
+    
+    @media @tablet {
+        top: 45px;
+        left: 50px;
+    }
+    
+    @media @mobile-sm {
+        position: static;
+        margin-bottom: 1.2rem;
+    }
+}
+
+.tabs__title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: @green-light;
+    line-height: 1;
+    
+    margin-bottom: 3rem;
+    
+    @media @tablet {
+        margin-bottom: 1rem;
+    }
+    
+    @media @mobile {
+        font-size: 2rem;
+    }
+    
+    @media @mobile-sm {
+        font-size: 1.7rem;
+    }
+}
+
+.tabs__text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.7rem;
+    color: @gray-light;
+    line-height: 1.8;
+    
+    @media @mobile {
+        font-size: 1.4rem;
+    }
+    
+    @media @mobile-sm {
+        font-size: 1.3rem;
+    }
+}
+
+

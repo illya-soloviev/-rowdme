@@ -1,0 +1,37 @@
+// main: ../style.less
+.logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    @media @mobile {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+.logos__item {
+    width: 14.28%;
+    
+    @media @mobile {
+        width: 33.33333%;
+        margin-bottom: 1.5rem;
+    }
+    
+    @media @mobile-sm {
+        width: 100%;
+    }
+}
+
+.logos__item img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+    opacity: .7;
+    transition: opacity .2s linear;
+    
+    &:hover {
+        opacity: 1;
+    }
+}

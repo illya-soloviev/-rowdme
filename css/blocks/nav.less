@@ -1,0 +1,92 @@
+// main: ../style.less
+.nav {
+    display: flex;
+    justify-content: center;
+    transition: margin .3s linear, transform .3s linear;
+
+    @media @tablet {
+        flex-wrap: wrap;
+        margin: 0;
+    }
+}
+
+.header.active nav {
+    @media @desktop {
+        transform: scale(1.2);
+    }
+}
+
+
+.nav__link {
+    display: inline-block;
+    height: 100%;
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: @gray;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    position: relative;
+    margin-right: 20px;
+    transition: color .2s linear;
+
+    &:last-child {
+        margin: 0;
+    }
+
+    &:after {
+        display: none;
+        content: '';
+
+        width: 100%;
+        height: 3px;
+        background-color: #8fc63d;
+        position: absolute;
+        top: 100%;
+        z-index: 1;
+
+        margin-top: 5px;
+    }
+
+    &:hover {
+        color: #8fc63d;
+    }
+
+    &:hover:after {
+        display: block;
+
+        @media @tablet {
+            display: none;
+        }
+    }
+
+    &.active {
+        color: #8fc63d;
+
+        @media @tablet {
+            background-color: #f9f1f1;
+        }
+    }
+
+    &.active:after {
+        display: block;
+
+        @media @tablet {
+            display: none;
+        }
+    }
+
+    @media @tablet {
+        display: block;
+        width: 100%;
+        padding: 2rem 1.5rem;
+        border-bottom: 1px solid #bcda5c;
+        margin: 0;
+
+        &:last-child {
+            border: 0;
+        }
+    }
+}

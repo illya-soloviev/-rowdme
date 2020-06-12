@@ -1,0 +1,63 @@
+// main: ../style.less
+.projects {
+    position: relative;
+    padding-right: 33rem;
+    
+    margin-bottom: 5rem;
+    
+    @media @tablet {
+        margin-bottom: 3rem;
+    }
+    
+    @media @mobile {
+        padding: 0;
+        text-align: center;
+    }
+}
+
+.projects__title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    color: @black;
+    line-height: 1;
+    
+    margin-bottom: 2.5rem;
+    
+    @media @tablet {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    @media @mobile-sm {
+        font-size: 2.1rem;
+    }
+}
+
+.projects__text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.7rem;
+    color: @gray;
+    line-height: 1.5;
+    
+    @media @tablet {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    @media @mobile-sm {
+        font-size: 1.3rem;
+    }
+}
+
+.projects__content a {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    z-index: 1;
+    
+    @media @mobile {
+        position: static;
+    }
+}

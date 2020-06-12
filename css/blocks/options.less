@@ -1,0 +1,100 @@
+// main: ../style.less
+.options {
+    display: flex;
+    justify-content: space-between;
+
+    @media @mobile {
+        flex-wrap: wrap;
+    }
+}
+
+.options__item {
+    padding-left: 18rem;
+    padding-right: 7rem;
+    position: relative;
+
+    &:last-child {
+        padding-left: 25rem;
+        padding-right: 0;
+
+        @media @tablet {
+            padding-left: 15rem;
+        }
+
+        @media @mobile {
+            padding-left: 10rem;
+            padding-right: 10rem;
+            text-align: center;
+            margin: 0;
+        }
+
+        @media @mobile-sm {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+    }
+
+    @media @mobile {
+        width: 100%;
+        padding-left: 10rem;
+        padding-right: 10rem;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    @media @mobile-sm {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+.options__img {
+    position: absolute;
+    top: 45px;
+    left: 10px;
+    z-index: 1;
+
+    @media @mobile {
+        position: static;
+        margin-bottom: 2rem;
+    }
+}
+
+.options__img.right-img {
+    left: 95px;
+
+    @media @tablet {
+        left: 0;
+    }
+}
+
+.options__title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 2.3rem;
+    color: @black;
+    text-transform: capitalize;
+    line-height: 1;
+
+    margin-bottom: 2rem;
+
+    @media @tablet {
+        font-size: 1.9rem;
+        margin-bottom: 1.2rem;
+    }
+}
+
+.options__text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.7rem;
+    color: @gray;
+    line-height: 1.8;
+
+    margin-bottom: 2.5rem;
+
+    @media @tablet {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+}
